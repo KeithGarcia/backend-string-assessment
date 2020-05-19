@@ -4,7 +4,7 @@ Kenzie assignment: String1
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Keith"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -28,8 +28,10 @@ __author__ = "???"
 
 
 def donuts(count):
-    # your code here
-    return
+    if count < 10:
+        return f'Number of donuts: {count}'
+    elif count >= 10:
+        return f'Number of donuts: many'
 
 
 # B. both_ends
@@ -42,10 +44,10 @@ def donuts(count):
 
 
 def both_ends(s):
-    # your code here
-    return
-
-
+    if len(s) > 2:
+        return s[0:2] + s[-2::]
+    else:
+        return ''
 # C. fix_start
 # Given a string s, return a string where all occurrences
 # of its first character have been changed to '*', except
@@ -58,23 +60,23 @@ def both_ends(s):
 
 
 def fix_start(s):
-    # your code here
-    return
+    s = s[0] + s[1:].replace(s[0], '*')
+    return s
 
-
-# D. mix_up
-# Given strings a and b, return a single string with a and
-# b separated by a space '<a> <b>', except swap the first
-# 2 characters of each string.
-# Example:
-#   'mix', 'pod' -> 'pox mid'
-#   'dog', 'dinner' -> 'dig donner'
-# Assume a and b are length 2 or more.
+    # D. mix_up
+    # Given strings a and b, return a single string with a and
+    # b separated by a space '<a> <b>', except swap the first
+    # 2 characters of each string.
+    # Example:
+    #   'mix', 'pod' -> 'pox mid'
+    #   'dog', 'dinner' -> 'dig donner'
+    # Assume a and b are length 2 or more.
 
 
 def mix_up(a, b):
-    # your code here
-    return
+    a2 = b[:2] + a[2:]
+    b2 = a[:2] + b[2:]
+    return a2 + ' ' + b2
 
 
 # Provided simple test() function used in main() to print
